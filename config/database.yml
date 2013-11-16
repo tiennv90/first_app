@@ -6,6 +6,8 @@
 development:
   adapter: postgresql
   database: my_database_development
+  username: postgres
+  password: admin
   pool: 5
   timeout: 5000
 
