@@ -1,4 +1,11 @@
 FirstApp::Application.routes.draw do
+  
+  match '/about', :to => 'pages#about', via: :get
+  match '/contact', :to => 'pages#contact', via: :get
+  match '/signup', :to => 'users#new', via: :get  
+  get "pages/home"
+
+
   resources :microposts
 
   resources :users
@@ -7,7 +14,7 @@ FirstApp::Application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-   root 'users#index'
+   root 'pages#home'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
